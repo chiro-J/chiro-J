@@ -1,4 +1,7 @@
 ## Hi there 👋
+### My name is chiro-J.
+
+> Today's weather is warm.
 
 <!--
 **chiro-J/chiro-J** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
