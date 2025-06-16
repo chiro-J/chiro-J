@@ -24,21 +24,111 @@
                 <legend>개인 정보</legend>
                 <ul>
                     <li>
-                        <label for="name">이름</label>
+                        <label for="name">이름 : </label>
                         <input type="text" id="name" name="name" placeholder="이름을 입력해주세요.">
                     </li>
+                    <br>
                     <li>
-                        <label for="mail">메일 주소</label>
+                        <label for="mail">메일 주소 : </label>
                         <input type="text" id="mail" name="mail" placeholder="메일을 입력해주세요.">
                     </li>
+                    <br>
+                    <li>
+                        <label for="age">나이 : </label>
+                        <input 
+                            type="number" 
+                            id="age" 
+                            name="age" 
+                            min="0" max="200"
+                            placeholder="Enter your age." >
+                    </li>
+                    <br>
+                    <li>
+                        <label>
+                        <input 
+                            type="checkbox" name="subscribe">
+                            구독하기
+                        </label>
+                        <label>
+                        <input 
+                            type="checkbox" name="subscribe">
+                            구독하기 2 
+                        </label>
+                        <label>
+                        <input 
+                            type="checkbox" name="subscribe">
+                            구독하기 3
+                        </label>
+                    </li>
+                    <br>
+                    <li>
+                        <label><input type="radio" name="gender">남자</label>
+                        <label><input type="radio" name="gender">여자</label>
+                    </li>
+                    <br>
+                    <li>
+                        <input type="file" name="file">
+                    </li>
+                    <br>
+                    <li>
+                        <input type="date" name="date">
+                    </li>
+                    <br>
+                    <li>
+                        <input type="range" name="range" min="0" max="100">
+                    </li>
+                    <br>
+                    <li>
+                        <input type="color" name="color">
+                    </li>
+                    <br>
+                    <li>
+                        <label for="country">Select your country</label>
+                        <select name="country" id="country">
+                            <option value="america">America</option>
+                            <option value="europe">Europe</option>
+                            <option value="asia">Asia</option>
+                        </select>
+                    </li>
+                    <br>
+                    <li>
+                        <label for="message"></label>
+                        <textarea 
+                            name="message" 
+                            id="message" 
+                            placeholder="Enter your message here..."
+                            rows="5"
+                            cols="50">
+                        </textarea>
+                    </li>
+                    <br>
+                    <button type="submit">Submit</button>
 
                 </ul>
             </fieldset>
-
-
-
-
         </form>
+
+        <br><br><br>
+
+
+
+        <form action="" method="get">
+            <fieldset>
+                <legend>CONTACT</legend>
+                <br>
+                <label for="name" id="name">Name : </label>
+                <input type="text" id="name" name="name">
+                <br><br>
+                <label for="e-mail" id="e-mail">E-mail : </label>
+                <input type="text" id="e-mail" name="e-mail">
+                <br><br>
+                <label for="message" id="message">Message : </label>
+                <textarea name="message" id="message" rows="5" cols="40"></textarea>
+                <br><br>
+                <center><button>Send Your Message</button></center>
+            </fieldset>
+        </form>
+
 
     </body>
 </html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>회원가입 폼</legend>
+
+            <ul>
+                <li>
+                    <!-- 이름 -->
+                    <label for="name" id="name">이름 : </label>
+                    <input type="text" id="name" name="name" placeholder="이름을 입력하세요.">
+                </li>
+
+                <br>
+
+                <li>
+                    <!-- 이메일 -->
+                    <label for="email" id="email">이메일 : </label>
+                    <input type="text" id="email" name="email" placeholder="이메일을 입력하세요.">
+                </li>
+
+                <br>
+
+                <li>
+                    <!-- 비밀번호 & 비밀번호 확인 -->
+                    <label for="password" id="password">암호 : </label>
+                    <input type="password" id="password" name="password" placeholder="암호를 입력하세요.">
+                <br>
+                    <label for="password-confirm" id="password-confirm">암호 확인 : </label>
+                    <input type="password" id="password-confirm" name="password-confirm" placeholder="다시 한 번 암호를 입력하세요.">
+                </li>
+
+                <br>
+
+                <li>
+                    <!-- 생년월일 -->
+                    <label for="birthDate" id="birthDate">생년월일 : </label>
+                    <input type="date" id="birthDate" name="birthDate">
+                </li>
+                
+                <br>
+
+                <li>
+                    <!-- 뉴스레터 수신 동의 여부 -->
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter" id="newsletter">뉴스레터 수신에 동의합니다.</label>
+                </li>
+
+                <br>
+
+                <li>
+                    <!-- 성별 -->
+                    <label for="gender" id="gender">성별을 선택해주세요.</label>
+                <br>
+                    <label><input type="radio" name="gender" value="male">남</label>
+                    <label><input type="radio" name="gender" value="female">여</label>
+                </li>
+
+                <br>
+
+                <li>
+                    <!-- 국가 선택 -->
+                    <label for="">국가를 선택해주세요.</label>
+                    <select name="country" id="country">
+                        <option value="kr">Republic of Korea</option>
+                        <option value="us">United States</option>
+                        <option value="jp">Japan</option>
+                    </select>
+                </li>
+
+                <br>
+
+                <li>
+                    <!-- 자기소개 -->
+                    <label for="">자기소개</label>
+                    <br>
+                    <textarea name="pr" id="pr" rows="5" cols="50"></textarea>
+                </li>
+
+                <br>
+
+                <li>
+                    <!-- 파일 첨부 -->
+                    <label for="">프로필 사진 업로드</label>
+                    <br>
+                    <input type="file">
+                </li>
+
+                <br>
+
+                <li>
+                    <!-- 음량 조절 -->
+                    <label for="">음량 조절</label>
+                    <br>
+                    0&nbsp;&nbsp;<input type="range" min="0" max="100">&nbsp;&nbsp;100
+                </li>
+
+            </ul>
+
+        </fieldset>
+
+        <br>
+
+        <button type="submit">제출 하기</button>
+    
+    </form>
+
+    <br><br>
+
+</body>
+
+</html>
