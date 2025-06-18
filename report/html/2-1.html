@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="customer">고객명 : </label>
+    <input type="text" id="customer" name="customer">
+    <br><br>
+
+    <label for="phoneNum">전화번호 : </label>
+    <input type="text" id="phoneNum" name="phoneNum">
+    <br><br>
+
+    <label for="e-mail">E-mail : </label>
+    <input type="text" id="e-mail" name="e-mail">
+    <br><br>
+    
+    <label for="pizzaMenu">피자선택 : </label>
+    <select name="pizzaMenu" id="pizzaMenu">
+        <option value="Null">피자를 선택하세요</option>
+        <option value="peperoni">페퍼로니 피자</option>
+        <option value="hawaiian">하와이안 피자</option>
+    </select>
+
+    <fieldset>
+        <legend>피자 사이즈</legend>
+        <input type="radio" name="small" id="small">
+            <label for="small">Small</label>
+            <br><br>
+        <input type="radio" name="medium" id="medium">
+            <label for="medium">Medium</label>
+            <br><br>
+        <input type="radio" name="large" id="large">
+            <label for="large">Large</label>
+            <br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>토핑 선택</legend>
+        <input type="checkbox" name="bacon" id="bacon">
+            <label for="bacon">베이컨</label>
+            <br><br>
+        <input type="checkbox" name="cheeze" id="cheeze">
+            <label for="cheeze">치즈</label>
+            <br><br>
+        <input type="checkbox" name="onion" id="onion">
+            <label for="onion">양파</label>
+            <br><br>
+        <input type="checkbox" name="mushroom" id="mushroom">
+            <label for="mushroom">버섯</label>
+            <br><br>
+    </fieldset>
+    <br>
+
+    <label for="deliveryTime">희망배송시간</label>
+    <input type="time" name="deliveryTime" id="deliveryTime">
+    <br><br>
+    
+    <label for="request">배송시 요청사항 : </label>
+    <textarea name="request" id="request" rows="3" cols="20"></textarea>
+    <br><br>
+
+    <button type="submit">주문하기</button>
+
+</body>
+</html>
