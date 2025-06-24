@@ -14,5 +14,5 @@ while (i <= 10) {
         continue;
     }
     console.log(`>>>${i}`);
-    i++
+    i++;
 }
