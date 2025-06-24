@@ -11,6 +11,7 @@
 
 
 // 팩토리얼 계산기
+// n! = n * (n - 1) * (n - 2) * ... * 1
 let num = prompt("숫자 입력");
 let result = 1;
 while (num > 0) {
