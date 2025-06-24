@@ -1,5 +1,5 @@
 ## Hi there 👋
-### My name is chiro-J. &nbsp; [![Tistory Badge](https://img.shields.io/badge/Tech%20Blog-555263?style=flat&logoColor=white)]("https://chiro-J.tistory.com/")
+### My name is chiro-J. &nbsp; [![Tistory Badge](https://img.shields.io/badge/Tech%20Blog-555263?style=flat&logoColor=white)](https://chiro-J.tistory.com/)
 
 > 프론트엔드 & 백엔드 개발자 / 클라우드 & 소프트웨어 아키텍트 지망생
 
