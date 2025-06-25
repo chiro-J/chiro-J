@@ -61,7 +61,7 @@ do {
 
 
 
-// 복습/심화 - 별 찍기 (미완)
+// 복습/심화 - 별 찍기
 function printStars(n) {
     for (let i = 1; i <= n; i++) {
         console.log("*".repeat(i));
@@ -70,19 +70,28 @@ function printStars(n) {
 printStars(3);
 
 
-
+// 오른쪽 정렬
 function printRightStars(n) {
     for (let i = 1; i <= n; i++) {
-        console.log("*".repeat(i).padStart(" "));
+        console.log("*".repeat(i).padStart(n, " "));
     }
 }
 printRightStars(5);
 
 
-
+// 피라미드
 function printPyramid(n) {
-    for (let i = 1; i <= n; i++) {
-        console.log("*".repeat(i));
+    let result = "";        // 결과값 생성
+    for (let i = 0; i < n; i++) {       // n줄 생성 
+        for (let j = 0; j < (n - i); j++) {     // n - i 만큼 공백 생성
+            result += " ";
+        }
+        
+        for (let k = 0; k < (2 * i + 1); k++) {     // 홀수만큼 * 생성
+            result += "*";
+        }
+        result += '\n';     // 줄바꿈
     }
+    console.log(result);
 }
-printPyramid(4)
+printPyramid(4);
