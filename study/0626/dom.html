@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 예제</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .active {
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <p id="greeting">안녕하세요 ! 반갑습니다 !</p>
+    <img src="https://picsum.photos/200/200" alt="">
+    <br><br>
+    <button id="btn">이미지 변경</button>
+    <br><br>
+    <div id="box" class="box">Box</div>
+    <br>
+    <button id="boxbtn">색 변경</button>
+    <br>
+    <div id="element-add">요소 추가 div</div>
+    <br>
+    <button id="element-add-button">요소 추가 버튼</button>
+    <button id="move-element">요소 이동 버튼</button>
+    <button id="remove-element">요소 삭제 버튼</button>
+</body>
+    <script>
+        let text = document.getElementById("greeting");
+        text.innerText = "Hello World !";
+
+        let image = document.getElementsByTagName("img");
+        image[0].src = "https://picsum.photos/300/300";
+
+        let button = document.getElementById("btn");
+        btn.addEventListener("click", function() {
+            alert("클릭");
+            image[0].src = "https://picsum.photos/100/300"
+        });
+
+        let box = document.getElementById("box");
+        box.style.backgroundColor = "blue";
+        
+        let boxBtn = document.getElementById("boxbtn");
+        boxBtn.addEventListener("click", function () {
+            let box = document.getElementById("box");
+            box.style.backgroundColor = "green";
+
+            box.classList.add("active");
+        });
+
+        
+        boxBtn.addEventListener("mouseover", function () {
+            let box = document.getElementById("box");
+            box.style.backgroundColor = "green";
+
+            box.classList.add("active");
+        });
+
+        boxBtn.addEventListener("mouseout", function () {
+            let box = document.getElementById("box");
+            box.style.backgroundColor = "green";
+
+            box.classList.remove("active");
+        });
+
+        let i = 0;
+        let elementAddButton = document.getElementById("element-add-button");
+        elementAddButton.addEventListener("click", function () {
+            let elementAdd = document.getElementById("element-add");
+            let elementAddDiv = document.createElement("div");
+            elementAddDiv.innerText = "추가" + i;
+            elementAddDiv.style.backgroundColor = "lightgreen";
+            elementAddDiv.style.color = "white";
+            elementAddDiv.style.padding = "10px 20px";
+            elementAddDiv.style.cursor = "pointer";
+            elementAddDiv.style.borderRadius = " 5px";
+            elementAddDiv.style.boxShadow = "0 0 10px 0 rgba(0, 0, 0, 0.5);";
+            elementAdd.appendChild(elementAddDiv);
+            i++;
+        });
+
+
+        let moveElementButton = document.getElementById("move-element");
+        moveElementButton.addEventListener("click", function () {
+            let box = document.getElementById("box");
+            let body = document.getElementsByName("body");
+            // body[0].appendChild(box);
+            body[0].insertBefore(box, body[0].firstChild);
+            
+        });
+
+
+        let removeElementButton = document.getElementById("remove-element");
+        removeElementButton.addEventListener("click", function () {
+            let title = document.getElementById("greeting");
+            title.remove();
+
+            let elementAddDiv = document.getElementById("element-add"); 
+            elementAddDiv.firstchild.parentElement.removeChild(elementAddDiv.lastChild);
+        });
+    </script>
+</html>
