@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>폼 검증</title>
+    </head>
+    <body>
+        <input id="orderName" type="text" placeholder="주문자 이름" />
+        <input id="shipName" type="text" placeholder="수령인 이름" />
+        <input id="same" type="checkbox" onclick="copyName()" />
+
+        <br />
+
+        <input id="userName" type="text" placeholder="이름" />
+        <input id="userAge" type="number" placeholder="나이" />
+        <input id="submit" type="submit" value="제출" onclick="validateForm()" />
+
+        <br />
+
+        <input
+            id="male"
+            type="radio"
+            name="gender"
+            value="male"
+            onclick="validateGender()"
+        />
+        <label for="male">남자</label>
+        <input
+            id="female"
+            type="radio"
+            name="gender"
+            value="female"
+            onclick="validateGender()"
+        />
+        <label for="female">여자</label>
+
+        <br />
+
+        <select id="country" onchange="validateCountry()">
+            <option value="korea">한국</option>
+            <option value="usa">미국</option>
+            <option value="japan">일본</option>
+        </select>
+
+
+
+        <form id="signupForm">
+            <input type="text" id="username" placeholder="이름 입력" /><br />
+            <input type="email" id="email" placeholder="이메일 입력" /><br />
+            <input type="password" id="password" placeholder="비밀번호 입력" /><br />
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="비밀번호 확인"
+            /><br />
+            <button type="submit">가입</button>
+        </form>
+
+        <form id="myForm">
+            <input type="email" required />
+            <button>제출</button>
+        </form>
+
+
+        <div
+            id="preview"
+            style="
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 24px auto;
+                width: 300px;
+                height: 200px;
+            "
+        >
+            <h3>가입 정보</h3>
+            <p id="preview_username"></p>
+            <p id="preview_email"></p>
+        </div>
+
+    </body>
+
+    <script src="form-script.js"></script>
+</html>

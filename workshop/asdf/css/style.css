@@ -1,0 +1,11 @@
+#container {
+    background-color: #777;
+    width: 600px;
+    height: 400px;
+}
+
+#weather-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
