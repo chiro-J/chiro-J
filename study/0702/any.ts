@@ -1,5 +1,5 @@
-let value: any = 10;
-value = "hello";
+let value: any = 10;        // 뭐든 되는 any 지정 후 10 할당
+value = "hello";            // string 도 재할당 가능
 
 // console.log(value);
 

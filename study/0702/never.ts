@@ -1,4 +1,4 @@
-function oldEnough(age: number): never | boolean {
+function oldEnough(age: number): never | boolean {      
     if (age > 59) {
         throw Error("Too old!");
     }

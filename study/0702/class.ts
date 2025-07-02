@@ -76,8 +76,6 @@ class Bus extends Car {
     trunk() {
         console.log("");
     }
-
-
 }
 
 
