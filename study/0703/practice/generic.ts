@@ -1,3 +1,4 @@
+// identity 함수는 받은 값을 그대로 반환 (입출력이 같은 타입)
 function identity<T>(value: T): T {
     return value;
 }

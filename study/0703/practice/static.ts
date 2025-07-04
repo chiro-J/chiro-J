@@ -1,17 +1,20 @@
-class Counter2 {
+class Counter {
     static count: number = 0;
 
     static increment() {
-        Counter2.count++;
+        Counter.count++;
     }
 
     static getCount() {
-        console.log(Counter2.count);
+        console.log(Counter.count);
     }
 }
 
-// let counter1 = new Counter2();
-Counter2.increment();
-Counter2.increment();
-Counter2.increment();
-Counter2.getCount();
+
+// 인스턴스(객체) 생성 없이 사용 가능
+// 클래스 이름으로 직접 접근
+// 모든 곳에서 같은 값 공유
+Counter.increment();
+Counter.increment();
+Counter.increment();
+Counter.getCount();

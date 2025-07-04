@@ -3,7 +3,7 @@ class Calculator {
         console.log(a + b);
     }
 
-
+// add 
     add(a: string, b: number): void {
         console.log(a + b);
     }
