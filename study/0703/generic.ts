@@ -9,12 +9,12 @@ console.log(output);
 let output2 = identity<number>(10);
 console.log(output2);
 
-function getValue<K extends string, V>(obj: Record<K, V>, key: K): V {
-    return obj[key];
-}
+// function getValue<K extends string, V>(obj: Record<K, V>, key: K): V {
+//     return obj[key];
+// }
 
-const objects = { name: "john", age: 20 };
+// const objects = { name: "john", age: 20 };
 
-let result2 = getValue(objects, "name");
+// let result2 = getValue(objects, "name");
 
-console.log(result2);
+// console.log(result2);
