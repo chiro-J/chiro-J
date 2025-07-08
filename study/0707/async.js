@@ -48,6 +48,8 @@ async function load() {
 
 // load();
 
+
+
 // await 병렬 처리
 const p1 = fetch("http://example.com/data1");
 const p2 = fetch("http://example.com/data2");
@@ -59,6 +61,8 @@ async function test() {
 }
 
 // test();
+
+
 
 // 과제 1: 간단한 비동기 함수 만들기
 function delay(ms) {

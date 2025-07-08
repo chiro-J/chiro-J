@@ -22,7 +22,7 @@ console.log(id, name, rest);
 
 
 // 1. 구조 분해 할당을 이용해 다음 객체에서 `title`과 `author`를 추출해보세요:
-const book = { title: "The Great Gatsby", author: "F. Scout" };
+const book = { title: "The Great Gatsby", author: "F. Scott Fitzgerald" };
 const { title: title2, author } = book;
 
 console.log(title2);
