@@ -7,25 +7,27 @@ import EventBubbling from "./pages/EventBubbling";
 import FileInput from "./pages/FileInput";
 import DragDrop from "./pages/DragDrop";
 
-// export default function App() {
-//   // const texts = [<p key="1">hello</p>, <p key="1">world</p>];
-//   // const texts = ["hello", "world"].map((text, index) => (
-//   //   <p key={index}>{text}</p>
-//   // ));
-//   const texts = ["hello", "world"].map((text, index) => (
-//     <p key={index} children={text} />
-//   ));
-//   return <div children={texts} />;
-// }
-
 export default function App() {
-  return (
-    <div>
-      <EventListener />
-      <ReactOnClick />
-      <EventBubbling />
-      <FileInput />
-      <DragDrop />
-    </div>
-  );
+  // const texts = [<p key="1">hello</p>, <p key="1">world</p>];
+  // const texts = ["hello", "world"].map((text, index) => (
+  //   <p key={index}>{text}</p>
+  // ));
+  // return <div>{texts}</div>
+
+  const texts = ["hello", "world"].map((text, index) => (
+    <p key={index} children={text} />
+  ));
+  return <div children={texts} />;
 }
+
+// export default function App() {
+//   return (
+//     <div>
+//       <EventListener />
+//       <ReactOnClick />
+//       <EventBubbling />
+//       <FileInput />
+//       <DragDrop />
+//     </div>
+//   );
+// }
