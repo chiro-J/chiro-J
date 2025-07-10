@@ -6,8 +6,8 @@ export default function App() {
   return (
     <div>
       <TextsTest />
-      {/* <Color /> */}
-      {/* <Tailwindcss /> */}
+      <Color />
+      <Tailwindcss />
     </div>
   )
 }
