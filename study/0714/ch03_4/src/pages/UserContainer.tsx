@@ -2,7 +2,9 @@ import {Title} from '../components'
 import * as D from '../data'
 import User from './User'
 
+
 export default function UserContainer() {
+  
   const children = D.makeArray(10)
     .map(D.makeRandomUser)
     .map(user => (
@@ -14,6 +16,7 @@ export default function UserContainer() {
         width="15rem"
       />
     ))
+    
   return (
     <section className="mt-4">
       <Title>UserContainer</Title>

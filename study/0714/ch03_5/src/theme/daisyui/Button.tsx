@@ -12,5 +12,6 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
   ...buttonProps
 }) => {
   const className = ['btn', _className].join(' ')
+  
   return <button {...buttonProps} className={className} />
 }

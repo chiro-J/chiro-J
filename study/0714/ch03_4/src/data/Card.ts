@@ -4,6 +4,7 @@ import * as C from './chance'
 import * as I from './image'
 import * as D from './date'
 
+
 export type ICard = {
   uuid: string
   writer: IUser
@@ -14,6 +15,7 @@ export type ICard = {
   relativeDate: string | null
 }
 
+
 export const makeCard = (
   uuid: string,
   writer: IUser,
@@ -23,8 +25,12 @@ export const makeCard = (
   dayMonthYearDate: string,
   relativeDate: string | null
 ): ICard => ({uuid, writer, image, title, paragraphs, dayMonthYearDate, relativeDate})
+
+
 export const makeRandomCard = () => {
+
   const date = D.makeRandomPastDate()
+
   return makeCard(
     C.randomUUID(),
     makeRandomUser(),
