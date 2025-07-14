@@ -1,8 +1,10 @@
-import type { FC, DetailedHTMLProps, HTMLAttributes } from 'react'
-import { makeClassName } from './textUtil'
+import type {FC, DetailedHTMLProps, HTMLAttributes} from 'react'
+import {makeClassName} from './textUtil'
 
-
-type TextProps = DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>
+type TextProps = DetailedHTMLProps<
+  HTMLAttributes<HTMLParagraphElement>,
+  HTMLParagraphElement
+>
 
 export type TitleProps = TextProps & {
   numberOfLines?: number
@@ -14,12 +16,11 @@ export const Title: FC<TitleProps> = ({
 }) => {
   const className = makeClassName(
     'font-bold text-5xl text-center whitespace-pre-line',
-    _className, 
-    numberOfLines,
+    _className,
+    numberOfLines
   )
   return <p {...props} className={className} />
 }
-
 
 export type SubtitleProps = TitleProps & {}
 export const Subtitle: FC<SubtitleProps> = ({
@@ -30,11 +31,10 @@ export const Subtitle: FC<SubtitleProps> = ({
   const className = makeClassName(
     'font-semibold text-3xl text-center whitespace-pre-line',
     _className,
-    numberOfLines,
+    numberOfLines
   )
   return <p {...props} className={className} />
 }
-
 
 export type SummaryProps = SubtitleProps & {}
 export const Summary: FC<SummaryProps> = ({
@@ -45,12 +45,10 @@ export const Summary: FC<SummaryProps> = ({
   const className = makeClassName(
     'text-sm whitespace-pre-line',
     _className,
-    numberOfLines,
+    numberOfLines
   )
   return <p {...props} className={className} />
 }
-
-
 
 export type ParagraphProps = SummaryProps & {}
 export const Paragraph: FC<ParagraphProps> = ({
@@ -61,8 +59,7 @@ export const Paragraph: FC<ParagraphProps> = ({
   const className = makeClassName(
     'font-normal text-base whitespace-pre-line',
     _className,
-    numberOfLines,
+    numberOfLines
   )
   return <p {...props} className={className} />
 }
-
