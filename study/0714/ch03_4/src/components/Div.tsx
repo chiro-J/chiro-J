@@ -3,10 +3,12 @@ import type {WidthHeight} from './WidthHeight'
 import type {LeftRightTopBottom} from './LeftRightTopBottom'
 import type {MinMaxWidthHeight} from './MinMaxWidthHeight'
 
+
 export type ReactDivProps = DetailedHTMLProps<
   HTMLAttributes<HTMLDivElement>,
   HTMLDivElement
 >
+
 export type DivProps = ReactDivProps &
   PropsWithChildren<WidthHeight> &
   LeftRightTopBottom &
@@ -24,6 +26,7 @@ export const Div: FC<DivProps> = ({
   minWidth, maxWidth, minHeight, maxHeight, 
   ...props
 }) => {
+  
   const style = {
     ..._style, 
     width, height, 
@@ -31,6 +34,7 @@ export const Div: FC<DivProps> = ({
     left, right, top, bottom, 
     minWidth, maxWidth, minHeight, maxHeight
   }
+
   const className = ['box-border', src && 'bg-gray-300', _className].join(' ')
   return <div {...props} className={className} style={style} />
 }
