@@ -19,6 +19,6 @@ export const createMyData = () => {
         "chiro-J",
         "FrontEnd Developer",
         "React와 TailwindCSS를 배우는 중입니다.", 
-        "https://www.forestsoftheworld.org/wp-content/uploads/2024/10/Klima-2-scaled.jpg"
+        "https://avatars.githubusercontent.com/u/103028942?v=4"
     )
 }

@@ -1,5 +1,4 @@
 import { FC } from 'react';
-import { ProfileData } from '../data';
 import type { MyCardProps } from '../pages';
 
 export type ProfileProps = MyCardProps & {
