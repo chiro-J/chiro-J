@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import type { MyCardProps } from '../pages';
+import * as D from '../data'
 
-export type ProfileProps = MyCardProps & {
-    
+export type ProfileProps = {
+    profile: D.ProfileData;
 }
 
 
