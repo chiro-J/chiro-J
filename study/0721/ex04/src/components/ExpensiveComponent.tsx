@@ -13,8 +13,8 @@ export default function ExpensiveComponent() {
             total += 1;
         }
         
-        return total;
-    }, []);
+        return total + count;
+    }, [count]);
 
     
     return (
