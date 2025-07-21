@@ -3,7 +3,6 @@ import logo from "./logo.svg";
 import "./App.css";
 import "@fontsource/material-icons";
 import RefTest from "./pages/RefTest";
-import App2 from "./contexts/UserContext";
 import ThemeTest from "./pages/ThemeTest";
 
 // function App() {
@@ -15,7 +14,6 @@ import ThemeTest from "./pages/ThemeTest";
 // }
 
 function App() {
-  // return <App2 />;
   return <ThemeTest />;
 }
 
