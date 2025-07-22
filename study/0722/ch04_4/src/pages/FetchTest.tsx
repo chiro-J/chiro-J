@@ -17,22 +17,37 @@ export default function FetchTest() {
     useEffect(getRandomUser, [getRandomUser])
 
     return (
-        <section className="">
+        <section className="mt-4">
             <Title>FetchTest</Title>
-            <div className="">
-                <Button className="">
+            <div className="flex justify-center mt-4">
+                <Button className="btn-sm btn-primary" onClick={getRandomUser}>
                     <Icon name="get_app"/>
                     <span>get random user</span>
                 </Button>
             </div>
+            
             {loading && (
-
+                <div className="flex items-center justify-center">
+                    <Button className="btn-circle loading"></Button>
+                </div>
             )}
+
             {error && (
-
+                <div className="p-4 mt-4 bg-red-200">
+                    <p className="text-3xl text-red-500 text-bold">{error.message}</p>
+                </div>
             )}
+
             {randomUser && (
-                
+                <div className="flex justify-center p-4 mt-4">
+                    <Avatar src={randomUser.picture.large} />
+                    <div className="ml-4">
+                        <p className="text-xl text-bold">
+                            {randomUser.name.title} {randomUser.name.first} {randomUser.name.last}
+                        </p>
+                        <p className="italic text-gray-600">{randomUser?.email}</p>
+                    </div>
+                </div>
             )}
         </section>
     )

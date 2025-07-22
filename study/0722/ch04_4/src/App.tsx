@@ -1,13 +1,9 @@
-import ButtonTest from './pages/ButtonTest'
-import InputTest from './pages/InputTest'
-import ModalTest from './pages/ModalTest'
+import FetchTest from "./pages/FetchTest"
 
 export default function App() {
   return (
     <main>
-      {/* <ButtonTest /> */}
-      {/* <InputTest /> */}
-      <ModalTest />
+      <FetchTest />
     </main>
   )
 }
