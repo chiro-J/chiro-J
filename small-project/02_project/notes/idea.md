@@ -9,6 +9,9 @@ sync : 현재 날씨/출몰 에 기반한 실시간 테마 모드
 
 
 ## Inspiration
+
+naver whale browser main(blank) page 아래의 날씨 컴포넌트
+
 Regnas Portal
 https://regnas.day/
 
@@ -58,3 +61,9 @@ useContext, useReducer
 - 번개
 - 안개 
 
+
+
+
+# 기능 추가 아이디어
+
+- pip 모드 (https://regnas.day/)
