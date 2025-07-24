@@ -1,21 +1,22 @@
-// todo
-import type { Action } from "redux";
-import type { UUID } from "../commonTypes";
+import type {Action} from 'redux'
+import type { UUID } from '../commonTypes'
 export * from '../commonTypes'
+
 
 export type State = UUID[]
 
 export type SetListidOrders = Action<'@listidOrders/set'> & {
-    payload: State
+    payload: 
 }
 
 export type AddListidToOrders = Action<'@listidOrders/add'> & {
-    payload: State
+    payload: 
 }
 
 export type RemoveListidFromOrders = Action<'@listidOrders/remove'> & {
-    payload: State
+    payload: 
 }
 
 
 export type Actions = SetListidOrders | AddListidToOrders | RemoveListidFromOrders
+

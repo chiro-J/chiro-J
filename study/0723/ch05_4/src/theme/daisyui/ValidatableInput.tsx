@@ -1,17 +1,18 @@
-import type {ReactInputProps} from './Input'
-import {forwardRef, useImperativeHandle, useMemo, useRef} from 'react'
+import {forwardRef, useImperativeHandle, useRef} from 'react'
+import {ReactInputProps} from './Input'
 
 export type ValidatableInputMethods = {
   validate: () => [boolean, string]
 }
 
+// useImperativeHandle 훅 사용
 export const ValidatableInput = forwardRef<ValidatableInputMethods, ReactInputProps>(
-  ({type, className: _className, ...inputProps}, methodRef) => {
-    const className = useMemo(() => ['input', _className].join(' '), [_className])
+  ({type, className: _className, ...inputProps}, methodsRef) => {
+    const className = ['input', _className].join(' ')
     const inputRef = useRef<HTMLInputElement>(null)
 
     useImperativeHandle(
-      methodRef,
+      methodsRef,
       () => ({
         validate: (): [boolean, string] => {
           const value = inputRef.current?.value
@@ -21,16 +22,16 @@ export const ValidatableInput = forwardRef<ValidatableInputMethods, ReactInputPr
             case 'email': {
               const regEx =
                 /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i
+
               const valid = regEx.test(value)
-              return valid ? [true, value] : [false, '틀린 이메일 주소 입니다.']
+              return valid ? [true, value] : [false, '틀린 이메일 주소입니다.']
             }
           }
-          return [false, '컴포넌트 타입이 유효하지 않습니다.']
+          return [true, value]
         }
       }),
       [type]
     )
-
     return <input {...inputProps} className={className} ref={inputRef} />
   }
 )

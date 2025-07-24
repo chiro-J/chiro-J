@@ -1,8 +1,8 @@
 import {configureStore} from '@reduxjs/toolkit'
-import {useMemo} from 'react'
 import {rootReducer} from './rootReducer'
+import {useMemo} from 'react'
 import logger from 'redux-logger'
-import {thunk} from 'redux-thunk'
+import thunk from 'redux-thunk'
 
 const useLogger = process.env.NODE_ENV !== 'production'
 
@@ -11,10 +11,8 @@ const initializeStore = () => {
   if (useLogger) {
     middleware.push(logger)
   }
-  const store = configureStore({
-    reducer: rootReducer,
-    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(middleware)
-  })
+
+  const store = configureStore({reducer: rootReducer, middleware})
   return store
 }
 

@@ -1,6 +1,7 @@
-import {useState, useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import {useEventListener} from './useEventListener'
 
+// 창 크기를 설정하는 커스텀 훅 만들기
 export const useWindowResize = () => {
   const [widthHeight, setWidthHeight] = useState<number[]>([0, 0])
 

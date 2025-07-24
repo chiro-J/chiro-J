@@ -8,7 +8,6 @@ const convertRandomUser = (result: unknown) => {
   const {email, name, picture} = result as IRandomUser
   return {email, name, picture}
 }
-
 export const fetchRandomUser = (): Promise<IRandomUser> =>
   new Promise((resolve, reject) => {
     fetch('https://randomuser.me/api/')
@@ -18,4 +17,5 @@ export const fetchRandomUser = (): Promise<IRandomUser> =>
         const {results} = data as {results: IRandomUser[]}
         resolve(convertRandomUser(results[0]))
       })
+      .catch(reject)
   })

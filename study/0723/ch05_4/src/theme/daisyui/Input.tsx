@@ -13,9 +13,3 @@ export const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
   const className = ['input', _className].join(' ')
   return <input ref={ref} {...inputProps} className={className} />
 })
-
-// 이렇게 작성하면 Input ref 속성을 사용할 수 없다.
-// export const Input: FC<InputProps> = ({className: _className, ...inputProps}) => {
-//   const className = ['input', _className].join(' ')
-//   return <input {...inputProps} className={className} />
-// }

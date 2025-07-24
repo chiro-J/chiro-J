@@ -13,20 +13,25 @@ const defaultContextValue: ContextType = {
 export const ResponsiveContext = createContext<ContextType>(defaultContextValue)
 
 type ResponsiveProviderProps = {}
-
 export const ResponsiveProvider: FC<PropsWithChildren<ResponsiveProviderProps>> = ({
   children,
   ...props
 }) => {
   const [width] = useWindowResize()
-  // prettier-ignore
-  const breakpoint = width < 640 ? 'sm' :
-                     width < 768 ? 'md' :
-                     width < 1024 ? 'lg' :
-                     width < 1280 ? 'xl' : '2xl'
+
+  const breakpoint =
+    width < 640
+      ? 'sm'
+      : width < 768
+      ? 'md'
+      : width < 1024
+      ? 'lg'
+      : width < 1280
+      ? 'xl'
+      : '2xl'
 
   const value = {
-    breakpoint // breakpoint: breakpoint 코드를 간결하게 표현
+    breakpoint
   }
   return <ResponsiveContext.Provider value={value} children={children} />
 }

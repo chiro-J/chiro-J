@@ -1,11 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit'
-import {useMemo} from 'react'
 import {rootReducer} from './rootReducer'
+import {useMemo} from 'react'
 
 const initializeStore = () => {
-  const store = configureStore({
-    reducer: rootReducer
-  })
+  const store = configureStore({reducer: rootReducer, middleware: []})
   return store
 }
 
