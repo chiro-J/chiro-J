@@ -1,10 +1,13 @@
 import {useCallback, useEffect, useState} from 'react'
 import {useSelector} from 'react-redux'
 import {useLocation, useNavigate, useParams, useSearchParams} from 'react-router-dom'
+
 import {Avatar, Div} from '../components'
 import type {AppState} from '../store'
 import type {Card as CardType} from '../store/commonTypes'
+
 import * as CE from '../store/cardEntities'
+
 
 export default function Card() {
   const location = useLocation()
