@@ -27,9 +27,10 @@ app.delete("/", (req, res) => {
   res.json({ message: "Hello express World!!" });
 });
 
-app.listen(port, hostname, () =>
-  console.log(`connect http://${hostname}:${port}`)
-);
+app.listen(port, hostname, () => {
+  console.log(`connect http://${hostname}:${port}`),
+  console.log(`Server listening at http://localhost:${port}`)
+});
 
 // createServer(app).listen(port, hostname, () =>
 //   console.log(`connect http://${hostname}:${port}`)
