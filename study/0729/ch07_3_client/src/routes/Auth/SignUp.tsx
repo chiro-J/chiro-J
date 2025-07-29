@@ -27,13 +27,13 @@ export default function SignUp() {
   }, [confirmPassword, email, navigate, password, signup])
 
   return (
-    <div className="flex flex-col min-h-screen border-gray-300 rounded-xl shadow-xl bg-gray-100 border">
+    <div className="flex flex-col min-h-screen bg-gray-100 border border-gray-300 shadow-xl rounded-xl">
       <div className="flex flex-col items-center justify-center flex-1 max-w-sm px-2 mx-auto">
         <div className="w-full px-6 py-8 text-black bg-white rounded shadow-md">
           <h1 className="mb-8 text-2xl text-center text-primary">Sign Up</h1>
           <input
             type="text"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 text-gray-400 input input-primary"
             name="email"
             placeholder="Email"
             value={email}
@@ -41,7 +41,7 @@ export default function SignUp() {
           />
           <input
             type="password"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 text-gray-400 input input-primary"
             name="password"
             placeholder="Password"
             value={password}
@@ -49,7 +49,7 @@ export default function SignUp() {
           />
           <input
             type="password"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 text-gray-400 input input-primary"
             name="confirm_password"
             placeholder="Confirm Password"
             value={confirmPassword}
@@ -63,7 +63,7 @@ export default function SignUp() {
           </button>
 
           <div className="mt-6 text-grey-dark">
-            Already have an accout?
+            Already have an account?
             <Link className="btn btn-link btn-primary" to="/login/">
               Login
             </Link>

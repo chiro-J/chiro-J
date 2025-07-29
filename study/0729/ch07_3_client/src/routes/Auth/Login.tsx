@@ -31,13 +31,13 @@ export default function Login() {
   }, [])
 
   return (
-    <div className="flex flex-col min-h-screen border-gray-300 rounded-xl shadow-xl bg-gray-100 border">
+    <div className="flex flex-col min-h-screen bg-gray-100 border border-gray-300 shadow-xl rounded-xl">
       <div className="flex flex-col items-center justify-center flex-1 max-w-sm px-2 mx-auto">
         <div className="w-full px-6 py-8 text-black bg-white rounded shadow-md">
           <h1 className="mb-8 text-2xl text-center text-primary">Login</h1>
           <input
             type="text"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 text-gray-400 input input-primary"
             name="email"
             placeholder="Email"
             value={email}
@@ -45,7 +45,7 @@ export default function Login() {
           />
           <input
             type="password"
-            className="w-full p-3 mb-4 input input-primary"
+            className="w-full p-3 mb-4 text-gray-400 input input-primary"
             name="password"
             placeholder="Password"
             value={password}
@@ -58,7 +58,7 @@ export default function Login() {
           <div className="mt-6 text-gray-800">
             Create account?
             <Link className="btn btn-link btn-primary" to="/signup/">
-              Login
+              Sign Up
             </Link>
           </div>
         </div>
