@@ -1,14 +1,20 @@
 ## 설치 명령어
 ```bash
-npx create-react-app my-app --template typescript
-cd my-app
+yarn create vite@latest
+cd {my_app}
 
 # 폰트 및 유틸리티 설치
-npm install chance luxon @fontsource/material-icons
-npm install -D @types/chance @types/luxon
+yarn add chance luxon @fontsource/material-icons
+yarn add -D @types/chance @types/luxon
 
 # TailwindCSS v4 및 DaisyUI 구성
-npm install -D tailwindcss@3.4.17 postcss autoprefixer @tailwindcss/postcss daisyui@4.12.12 @tailwindcss/line-clamp
+yarn add -D @tailwindcss/cli
+yarn add -D tailwindcss postcss autoprefixer @tailwindcss/postcss daisyui @tailwindcss/line-clamp
+
+# redux 패키지 설치
+yarn add redux @reduxjs/toolkit react-redux react-router-dom
+yarn add redux-logger 
+yarn add -D @types/redux-logger
 ```
 
 ## tailwind.config.js
