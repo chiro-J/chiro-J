@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 2s ease;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 새벽 (5-7시) */
+.dawn {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #ff6b6b 100%);
+    color: #ffffff;
+}
+
+/* 아침 (7-11시) */
+.morning {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 50%, #fdcb6e 100%);
+    color: #2d3436;
+}
+
+/* 낮 (11-17시) */
+.day {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 30%, #fdcb6e 70%, #fd79a8 100%);
+    color: #2d3436;
+}
+
+/* 저녁 (17-20시) */
+.evening {
+    background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 30%, #e17055 70%, #6c5ce7 100%);
+    color: #2d3436;
+}
+
+/* 밤 (20-24시) */
+.night {
+    background: linear-gradient(135deg, #2d3436 0%, #636e72 30%, #6c5ce7 70%, #a29bfe 100%);
+    color: #ffffff;
+}
+
+/* 심야 (0-5시) */
+.midnight {
+    background: linear-gradient(135deg, #2d3436 0%, #636e72 50%, #74b9ff 100%);
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.time-display {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.period-display {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.8;
+}
+
+.color-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.color-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.color-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.color-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 동적 요소들 */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+.sun {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #ffd700 0%, #ffed4e 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.6);
+    z-index: 2;
+    transition: all 2s ease;
+}
+
+.moon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #f1f2f6 0%, #ddd 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(241, 242, 246, 0.4);
+    z-index: 2;
+    transition: all 2s ease;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.controls {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.control-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}

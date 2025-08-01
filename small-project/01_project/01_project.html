@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 시각 기반 색상 테마</title>
+
+    <!-- style CSS -->
+    <link rel="stylesheet" href="src/css/style.css">
+
+
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    <div class="sun" id="sun"></div>
+    <div class="moon" id="moon"></div>
+    
+    <div class="container">
+        <div class="time-display" id="timeDisplay">00:00:00</div>
+        <div class="period-display" id="periodDisplay">시간대</div>
+        <div class="description" id="description">
+            현재 시간에 따라 화면의 색상이 자동으로 변경됩니다.
+        </div>
+        
+        <div class="color-info">
+            <div class="color-card">
+                <h3>🌅 새벽 (5-7시)</h3>
+                
+            </div>
+            <div class="color-card">
+                <h3>🌤️ 아침 (7-11시)</h3>
+                
+            </div>
+            <div class="color-card">
+                <h3>☀️ 낮 (11-17시)</h3>
+                
+            </div>
+            <div class="color-card">
+                <h3>🌇 저녁 (17-20시)</h3>
+                
+            </div>
+            <div class="color-card">
+                <h3>🌙 밤 (20-24시)</h3>
+                
+            </div>
+            <div class="color-card">
+                <h3>🌌 심야 (0-5시)</h3>
+                
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" onclick="setTestTime(6)">새벽 테스트</button>
+            <button class="control-btn" onclick="setTestTime(9)">아침 테스트</button>
+            <button class="control-btn" onclick="setTestTime(14)">낮 테스트</button>
+            <button class="control-btn" onclick="setTestTime(18)">저녁 테스트</button>
+            <button class="control-btn" onclick="setTestTime(22)">밤 테스트</button>
+            <button class="control-btn" onclick="setTestTime(2)">심야 테스트</button>
+            <button class="control-btn" onclick="resetToRealTime()">실제 시간</button>
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+
+</body>
+</html>
