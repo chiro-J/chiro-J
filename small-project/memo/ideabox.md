@@ -7,3 +7,9 @@ https://helloinyong.tistory.com/347
 
 ## Vite 가이드
 https://ko.vite.dev/guide/
+
+
+
+# 날씨
+## 아래 날씨군들을 분류
+https://openweathermap.org/weather-conditions
