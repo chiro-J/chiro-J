@@ -1,7 +1,9 @@
 # 1. REST 원칙 및 HTTP 메서드
 
 ## REST란?
-REST(Representational State Transfer)는 분산 시스템을 위한 소프트웨어 아키텍처 스타일입니다. 웹의 기존 기술과 HTTP 프로토콜을 그대로 활용하여 웹의 장점을 최대한 활용할 수 있는 아키텍처입니다.
+> REST(Representational State Transfer)는 분산 시스템을 위한 소프트웨어 아키텍처 스타일입니다. 
+
+웹의 기존 기술과 HTTP 프로토콜을 그대로 활용하여 웹의 장점을 최대한 활용할 수 있는 아키텍처입니다.
 
 <br>
 
@@ -40,8 +42,8 @@ REST(Representational State Transfer)는 분산 시스템을 위한 소프트웨
 | **GET** | 리소스 조회 | ✅ | ✅ | ✅ | ❌ | ✅ |
 | **POST** | 리소스 생성/처리 | ❌ | ❌ | ❌ | ✅ | ✅ |
 | **PUT** | 리소스 전체 수정/생성 | ❌ | ✅ | ❌ | ✅ | ✅ |
-| **PATCH** | 리소스 부분 수정 | ❌ | ❌ | ❌ | ✅ | ✅ |
 | **DELETE** | 리소스 삭제 | ❌ | ✅ | ❌ | ❌ | ✅ |
+| **PATCH** | 리소스 부분 수정 | ❌ | ❌ | ❌ | ✅ | ✅ |
 | **HEAD** | 헤더 정보만 조회 | ✅ | ✅ | ✅ | ❌ | ❌ |
 | **OPTIONS** | 지원 메서드 확인 | ✅ | ✅ | ❌ | ❌ | ✅ |
 
@@ -62,7 +64,7 @@ REST(Representational State Transfer)는 분산 시스템을 위한 소프트웨
 | **1xx** | 정보성 응답 | 100 Continue |
 | **2xx** | 성공 | 200 OK, 201 Created, 204 No Content |
 | **3xx** | 리다이렉션 | 301 Moved Permanently, 304 Not Modified |
-| **4xx** | 클라이언트 오류 | 400 Bad Request, 401 Unauthorized, 404 Not Found |
+| **4xx** | 클라이언트 오류 | 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found |
 | **5xx** | 서버 오류 | 500 Internal Server Error, 503 Service Unavailable |
 
 
@@ -74,6 +76,7 @@ REST(Representational State Transfer)는 분산 시스템을 위한 소프트웨
 ## 기본 원칙
 
 1. **명사 사용**: 동사가 아닌 명사를 사용하여 리소스를 표현
+
 2. **복수형 사용**: 컬렉션은 복수형으로 표현
 3. **계층 구조**: 슬래시(/)를 사용하여 계층 관계 표현
 4. **소문자 사용**: URL은 소문자로 구성
@@ -102,8 +105,8 @@ REST(Representational State Transfer)는 분산 시스템을 위한 소프트웨
 | **상세 조회** | GET | `/users/123` | ID가 123인 사용자 |
 | **생성** | POST | `/users` | 새 사용자 생성 |
 | **전체 수정** | PUT | `/users/123` | ID가 123인 사용자 전체 수정 |
-| **부분 수정** | PATCH | `/users/123` | ID가 123인 사용자 부분 수정 |
 | **삭제** | DELETE | `/users/123` | ID가 123인 사용자 삭제 |
+| **부분 수정** | PATCH | `/users/123` | ID가 123인 사용자 부분 수정 |
 
 <br>
 
