@@ -34,6 +34,7 @@ function registerByPromise(user) {
                     .then(sendEmail)
                     .then(getResult)
                     .catch(error => new Error(error))
+                    // 성공, 실패 여부에 관계 없이 실행
                     .finally(() => console.log("완료!"))
     console.log(result)
     return result;

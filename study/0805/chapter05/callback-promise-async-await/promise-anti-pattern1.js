@@ -10,10 +10,12 @@ function myWork(work) {
 }
 
 
+// 콜백과 다를 바가 없음
 myWork('done').then(function (value) { console.log(value) }, function (err) {
     console.error(err)
 })
 
+// 좋음
 myWork('doing')
     .then(function (value) { console.log(value) })
     .catch(function (err) { console.error(err) })

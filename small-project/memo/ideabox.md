@@ -10,7 +10,7 @@ https://ko.vite.dev/guide/
 
 
 
-# 기본 템플릿 좋은 것들만 추출해서 재구성하여 만들기
+# 기본 템플릿 좋은 것들만 추출해서 재구성하여 만들기 
 https://tailwindflex.com/playground/draft/template-for-software-developer-4C5JlH9Xq6
 https://tailwindflex.com/playground/draft/devport-SXWVx5xwnv
 
