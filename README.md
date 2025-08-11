@@ -23,7 +23,6 @@
 [![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
 
 
-
 ### 프레임워크
 
 [![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://react.dev/)
@@ -34,7 +33,19 @@
 [![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white)](https://github.com/features/actions)
 
 
+### 기타
+
+![Notion](https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+
+### Certificates
+[![Microsoft Certified: Azure AI Fundamentals](https://images.credly.com/size/110x110/images/4136ced8-75d5-4afb-8677-40b6236e2672/azure-ai-fundamentals-600x600.png)](https://www.credly.com/badges/1645f438-7283-42d1-8126-e76fc2733273/public_url)
+[![AWS Certified Cloud Practitioner](https://images.credly.com/size/110x110/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png)](https://www.credly.com/badges/dd0b4ba2-d7a7-4af1-b512-cd279ece6e86/public_url)
+
+
 <br>
+
 
 ## GitHub 통계
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=chiro-J&show_icons=true&theme=highcontrast)
