@@ -1,13 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./index.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./shared/layout/Layout";
+import Portfolio from "./pages/Portfolio";
+import Guestbook from "./pages/Guestbook";
 
 function App() {
-
   return (
-    <h1>Hello, </h1>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Portfolio />} />
+          <Route path="guestbook" element={<Guestbook />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
