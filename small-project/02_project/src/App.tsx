@@ -3,10 +3,21 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./shared/layout/Layout";
 import Portfolio from "./pages/Portfolio";
 import Guestbook from "./pages/Guestbook";
+import Galaxy from "./shared/Galaxy";
 
 function App() {
   return (
     <BrowserRouter>
+      <div style={{ width: "100%", height: "600px", position: "absolute" }}>
+        <Galaxy
+          mouseRepulsion={false}
+          mouseInteraction={false}
+          density={0.2}
+          glowIntensity={0.2}
+          saturation={0.2}
+          hueShift={120}
+        />
+      </div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Portfolio />} />
