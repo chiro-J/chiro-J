@@ -8,9 +8,9 @@ export default function Portfolio() {
   return (
     <section
       id="home"
-      className="max-w-screen-md min-h-screen mx-auto p-8 text-white"
+      className="max-w-screen-md flex items-center min-h-screen px-32 text-white"
     >
-      <div className="text-4xl font-bold">
+      <div className="text-2xl font-bold">
         <Hero />
         <About />
         <TechStacks />
