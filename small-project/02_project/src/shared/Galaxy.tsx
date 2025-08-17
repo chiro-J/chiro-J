@@ -38,7 +38,7 @@ uniform bool uTransparent;
 
 varying vec2 vUv;
 
-#define NUM_LAYER 4.0
+#define NUM_LAYER 2.0
 #define STAR_COLOR_CUTOFF 0.2
 #define MAT45 mat2(0.7071, -0.7071, 0.7071, 0.7071)
 #define PERIOD 3.0
@@ -234,8 +234,15 @@ export default function Galaxy({
     let program: Program;
 
     function resize() {
-      const scale = 1;
-      renderer.setSize(ctn.offsetWidth * scale, ctn.offsetHeight * scale);
+      const scale = 0.33;
+      const width = ctn.offsetWidth;
+      const height = ctn.offsetHeight;
+
+      renderer.setSize(width * scale, height * scale, false);
+
+      gl.canvas.style.width = width + "px";
+      gl.canvas.style.height = height + "px";
+
       if (program) {
         program.uniforms.uResolution.value = new Color(
           gl.canvas.width,
@@ -284,14 +291,27 @@ export default function Galaxy({
       },
     });
 
+    const isLowEnd =
+      /Mobi|Android/i.test(navigator.userAgent) ||
+      gl.getParameter(gl.RENDERER).includes("Intel");
+    if (isLowEnd) {
+      density *= 0.7;
+      twinkleIntensity *= 0.5;
+      glowIntensity *= 0.5;
+    }
+
     const mesh = new Mesh(gl, { geometry, program });
     let animateId: number;
 
+    let lastTime = 0;
     function update(t: number) {
       animateId = requestAnimationFrame(update);
+
+      if (t - lastTime < 30) return; // 👈 30ms마다 (≈ 33fps)
+      lastTime = t;
       if (!disableAnimation) {
-        program.uniforms.uTime.value = t * 0.001;
-        program.uniforms.uStarSpeed.value = (t * 0.001 * starSpeed) / 10.0;
+        program.uniforms.uTime.value = t * 0.0005;
+        program.uniforms.uStarSpeed.value = (t * 0.0005 * starSpeed) / 10.0;
       }
 
       const lerpFactor = 0.05;

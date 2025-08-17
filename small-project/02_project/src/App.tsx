@@ -8,14 +8,14 @@ import Galaxy from "./shared/Galaxy";
 function App() {
   return (
     <BrowserRouter>
-      <div style={{ width: "100%", height: "600px", position: "absolute" }}>
+      <div style={{ width: "100%", height: "100%", position: "absolute" }}>
         <Galaxy
           mouseRepulsion={false}
           mouseInteraction={false}
-          density={0.2}
+          density={0.5}
           glowIntensity={0.2}
           saturation={0.2}
-          hueShift={120}
+          hueShift={240}
         />
       </div>
       <Routes>
