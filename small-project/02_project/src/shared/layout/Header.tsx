@@ -8,11 +8,13 @@ export default function Header() {
       <div className="flex items-center justify-between w-full max-w-screen-xl mx-auto">
         {/* 로고 */}
         <div className="">
-          <img
-            src={nameTypho}
-            alt="name_typho"
-            className="h-[40px] object-contain"
-          />
+          <a href="#">
+            <img
+              src={nameTypho}
+              alt="name_typho"
+              className="h-[40px] object-contain"
+            />
+          </a>
         </div>
 
         <div className="flex gap-2">

@@ -234,11 +234,11 @@ export default function Galaxy({
     let program: Program;
 
     function resize() {
-      const scale = 0.33;
+      const scale = 0.5;
       const width = ctn.offsetWidth;
       const height = ctn.offsetHeight;
 
-      renderer.setSize(width * scale, height * scale, false);
+      renderer.setSize(width * scale, height * scale);
 
       gl.canvas.style.width = width + "px";
       gl.canvas.style.height = height + "px";
@@ -291,14 +291,15 @@ export default function Galaxy({
       },
     });
 
-    const isLowEnd =
-      /Mobi|Android/i.test(navigator.userAgent) ||
-      gl.getParameter(gl.RENDERER).includes("Intel");
-    if (isLowEnd) {
-      density *= 0.7;
-      twinkleIntensity *= 0.5;
-      glowIntensity *= 0.5;
-    }
+    // 모바일 등의 하드웨어 스펙이 낮은 경우, 퍼포먼스를 낮춤
+    // const isLowEnd =
+    //   /Mobi|Android/i.test(navigator.userAgent) ||
+    //   gl.getParameter(gl.RENDERER).includes("Intel");
+    // if (isLowEnd) {
+    //   density *= 0.7;
+    //   twinkleIntensity *= 0.5;
+    //   glowIntensity *= 0.5;
+    // }
 
     const mesh = new Mesh(gl, { geometry, program });
     let animateId: number;

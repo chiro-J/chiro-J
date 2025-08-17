@@ -3,12 +3,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./shared/layout/Layout";
 import Portfolio from "./pages/Portfolio";
 import Guestbook from "./pages/Guestbook";
-import Galaxy from "./shared/Galaxy";
+import Galaxy from "./shared/Backgrounds/Galaxy";
 
 function App() {
   return (
     <BrowserRouter>
-      <div style={{ width: "100%", height: "100%", position: "absolute" }}>
+      <div
+        style={{ width: "100%", height: "100%", position: "fixed", zIndex: -1 }}
+      >
         <Galaxy
           mouseRepulsion={false}
           mouseInteraction={false}

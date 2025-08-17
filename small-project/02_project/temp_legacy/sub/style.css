@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/preflight" @tailwind utilities;
+@import "tailwindcss";
 
 @layer components {
   /* .btn-primary {

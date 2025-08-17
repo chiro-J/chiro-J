@@ -6,7 +6,10 @@ import Contact from "../components/Contact";
 
 export default function Portfolio() {
   return (
-    <section id="home" className="min-h-screen p-8 text-white bg-gray-900">
+    <section
+      id="home"
+      className="max-w-screen-md min-h-screen mx-auto p-8 text-white"
+    >
       <div className="text-4xl font-bold">
         <Hero />
         <About />
